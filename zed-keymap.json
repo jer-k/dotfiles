@@ -34,6 +34,7 @@
     "context": "Editor",
     "bindings": {
       // Navigation
+      "cmd-shift-o": "file_finder::Toggle",
       "cmd-b": "editor::GoToDefinition",
       "cmd-alt-b": "editor::GoToImplementation",
       "cmd-u": "editor::UndoSelection",
@@ -108,3 +109,4 @@
     }
   }
 ]
+
