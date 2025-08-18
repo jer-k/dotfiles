@@ -98,7 +98,8 @@
       "cmd-n": "project_panel::NewFile",
       "alt-cmd-n": "project_panel::NewDirectory",
       "delete": ["project_panel::Trash", { "skip_prompt": false }],
-      "f2": "project_panel::Rename"
+      "f2": "project_panel::Rename",
+      "cmd-k": "project_panel::CollapseAllEntries"
     }
   },
   {
