@@ -1,0 +1,16 @@
+[
+  {
+    "label": "test $ZED_RELATIVE_FILE:$ZED_ROW",
+    "command": "bundle exec rails",
+    "args": ["test", "\"$ZED_RELATIVE_FILE:$ZED_ROW\""],
+    "tags": ["ruby-test"]
+  },
+  {
+    "label": "Quick OpenCode Chat",
+    "command": "opencode",
+    "args": [],
+    "tags": ["opencode"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": true
+  }
+]
