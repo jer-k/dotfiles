@@ -17,6 +17,7 @@
       
       // Tool windows
       "cmd-t": "terminal_panel::ToggleFocus",
+      "cmd-t cmd-o": ["task::Spawn", {"task_name": "Quick OpenCode Chat"}],
       
       // Search
       "cmd-shift-f": "pane::DeploySearch",
@@ -99,15 +100,16 @@
       "alt-cmd-n": "project_panel::NewDirectory",
       "delete": ["project_panel::Trash", { "skip_prompt": false }],
       "f2": "project_panel::Rename",
-      "cmd-k": "project_panel::CollapseAllEntries"
+	  "cmd-k": "project_panel::CollapseAllEntries"
     }
   },
   {
     "context": "Terminal",
     "bindings": {
       "cmd-k": "terminal::Clear",
-      "cmd-t": "workspace::NewTerminal"
+      "cmd-t": "workspace::NewTerminal",
+      "cmd-e": "workspace::ToggleZoom",
+      "cmd-shift-t": "pane::CloseActiveItem"
     }
   }
 ]
-
