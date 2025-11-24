@@ -14,14 +14,14 @@
       "cmd-shift-o": "file_finder::Toggle",
       "cmd-e": ["projects::OpenRecent", { "create_new_window": false }],
       "cmd-shift-a": "agent::ToggleFocus",
-      
+
       // Tool windows
       "cmd-t": "terminal_panel::ToggleFocus",
-      "cmd-t cmd-o": ["task::Spawn", {"task_name": "Quick OpenCode Chat"}],
-      
+      "cmd-t cmd-o": ["task::Spawn", { "task_name": "Quick OpenCode Chat" }],
+
       // Search
       "cmd-shift-f": "pane::DeploySearch",
-      "cmd-shift-r": ["pane::DeploySearch", {"replace_enabled": true}]
+      "cmd-shift-r": ["pane::DeploySearch", { "replace_enabled": true }]
     }
   },
   {
@@ -45,7 +45,7 @@
       "cmd-g": "go_to_line::Toggle",
       "cmd-shift-g": "go_to_line::Toggle",
       "cmd-shift-i": "outline::Toggle",
-      
+
       // Selection
       "cmd-w": "editor::SelectLargerSyntaxNode",
       "cmd-shift-w": "editor::SelectSmallerSyntaxNode",
@@ -54,42 +54,41 @@
       "cmd-ctrl-g": "editor::SelectAllMatches",
       "alt-up": "editor::MoveLineUp",
       "alt-down": "editor::MoveLineDown",
-      
+
       // Editing
       "cmd-shift-enter": "editor::NewlineAbove",
       "cmd-enter": "editor::NewlineBelow",
       "cmd-shift-j": "editor::JoinLines",
       "cmd-/": ["editor::ToggleComments", { "advance_downwards": false }],
-      "cmd-alt-l": "editor::Format",
+      "cmd-shift-l": "editor::Format",
       "cmd-shift-u": "editor::RedoSelection",
       "cmd-shift-up": "editor::MoveLineUp",
       "cmd-shift-down": "editor::MoveLineDown",
       "cmd-backspace": "editor::DeleteToBeginningOfLine",
       "alt-backspace": "editor::DeleteToPreviousWordStart",
       "alt-delete": "editor::DeleteToNextWordEnd",
-      
+
       // Code actions
       "alt-enter": "editor::ToggleCodeActions",
-      "cmd-shift-l": "editor::Format",
       "f2": "editor::Rename",
-      
+
       // Search and replace
       "cmd-f": "buffer_search::Deploy",
       "cmd-r": "buffer_search::DeployReplace",
       "f3": "search::SelectNextMatch",
       "shift-f3": "search::SelectPreviousMatch",
       "cmd-shift-f": "pane::DeploySearch",
-      
+
       // Folding
       "cmd-plus": "editor::UnfoldLines",
       "cmd-minus": "editor::Fold",
       "cmd-shift-plus": "editor::UnfoldAll",
       "cmd-shift-minus": "editor::FoldAll",
-      
+
       // Multiple cursors
       "cmd-alt-up": "editor::AddSelectionAbove",
       "cmd-alt-down": "editor::AddSelectionBelow",
-      "cmd-shift-l": "editor::SelectAllMatches"
+      "cmd-alt-l": "editor::SelectAllMatches"
     }
   },
   {
@@ -100,7 +99,7 @@
       "alt-cmd-n": "project_panel::NewDirectory",
       "delete": ["project_panel::Trash", { "skip_prompt": false }],
       "f2": "project_panel::Rename",
-	  "cmd-k": "project_panel::CollapseAllEntries"
+      "cmd-k": "project_panel::CollapseAllEntries"
     }
   },
   {
