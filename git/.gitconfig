@@ -1,0 +1,13 @@
+[core]
+  pager = delta
+  excludesfile = /Users/jeremykreutzbender/.gitignore_global
+
+[init]
+  defaultBranch = main
+
+[delta]
+  line-numbers = true
+  tabs = 2
+
+[rerere]
+  enabled = true
