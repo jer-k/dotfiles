@@ -1,2 +1,5 @@
 opencode.*
 .zed/*
+.DS_Store
+.idea
+out/*
