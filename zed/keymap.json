@@ -21,15 +21,14 @@
 
       // Search
       "cmd-shift-f": "pane::DeploySearch",
-      "cmd-shift-r": ["pane::DeploySearch", { "replace_enabled": true }]
-    }
+      "cmd-shift-r": ["pane::DeploySearch", { "replace_enabled": true }],
+    },
   },
   {
     "context": "AgentPanel",
     "bindings": {
       "cmd-shift-a": "workspace::ToggleRightDock",
-      "cmd-shift-c": "agent::ToggleContextPicker"
-    }
+    },
   },
   {
     "context": "Editor",
@@ -88,8 +87,8 @@
       // Multiple cursors
       "cmd-alt-up": "editor::AddSelectionAbove",
       "cmd-alt-down": "editor::AddSelectionBelow",
-      "cmd-alt-l": "editor::SelectAllMatches"
-    }
+      "cmd-alt-l": "editor::SelectAllMatches",
+    },
   },
   {
     "context": "ProjectPanel && not_editing",
@@ -99,8 +98,8 @@
       "alt-cmd-n": "project_panel::NewDirectory",
       "delete": ["project_panel::Trash", { "skip_prompt": false }],
       "f2": "project_panel::Rename",
-      "cmd-k": "project_panel::CollapseAllEntries"
-    }
+      "cmd-k": "project_panel::CollapseAllEntries",
+    },
   },
   {
     "context": "Terminal",
@@ -108,7 +107,7 @@
       "cmd-k": "terminal::Clear",
       "cmd-t": "workspace::NewTerminal",
       "cmd-e": "workspace::ToggleZoom",
-      "cmd-shift-t": "pane::CloseActiveItem"
-    }
-  }
+      "cmd-shift-t": "pane::CloseActiveItem",
+    },
+  },
 ]
