@@ -11,6 +11,7 @@
     "bindings": {
       // Navigation
       "shift shift": "project_symbols::Toggle",
+      "cmd-p": "project_panel::ToggleFocus",
       "cmd-shift-o": "file_finder::Toggle",
       "cmd-e": ["projects::OpenRecent", { "create_new_window": false }],
       "cmd-shift-a": "agent::ToggleFocus",
@@ -18,6 +19,13 @@
       // Tool windows
       "cmd-t": "terminal_panel::ToggleFocus",
       "cmd-t cmd-o": ["task::Spawn", { "task_name": "Quick OpenCode Chat" }],
+
+      // Buffers / panes
+      "cmd-b": null,
+      "cmd-b cmd-w": ["pane::CloseActiveItem", { "close_pinned": false }],
+      "cmd-b cmd-o": ["pane::CloseOtherItems", { "close_pinned": false }],
+      "cmd-b cmd-a": "workspace::CloseAllItemsAndPanes",
+      "cmd-k cmd-w": null,
 
       // Search
       "cmd-shift-f": "pane::DeploySearch",
@@ -33,33 +41,45 @@
   {
     "context": "Editor",
     "bindings": {
-      // Navigation
+      // Duplicated here to overwrite
       "cmd-shift-o": "file_finder::Toggle",
-      "cmd-b": "editor::GoToDefinition",
+
+      // Navigation
+
       "cmd-alt-b": "editor::GoToImplementation",
       "cmd-u": "editor::UndoSelection",
       "cmd-shift-b": "editor::GoToTypeDefinition",
-      "cmd-alt-left": "pane::GoBack",
-      "cmd-alt-right": "pane::GoForward",
+      "cmd-alt-l": "pane::GoBack",
+      "cmd-alt-r": "pane::GoForward",
       "cmd-g": "go_to_line::Toggle",
       "cmd-shift-g": "go_to_line::Toggle",
       "cmd-shift-i": "outline::Toggle",
 
+      // Home-row movement
+      "cmd-h": "editor::MoveLeft",
+      "cmd-j": "editor::MoveDown",
+      "cmd-k": "editor::MoveUp",
+      "cmd-l": "editor::MoveRight",
+      "cmd-ctrl-h": ["editor::MoveToBeginningOfLine", { "stop_at_soft_wraps": true, "stop_at_indent": true }],
+      "cmd-ctrl-l": ["editor::MoveToEndOfLine", { "stop_at_soft_wraps": true }],
+
       // Selection
+      "cmd-shift-h": "editor::SelectLeft",
+      "cmd-shift-j": "editor::SelectDown",
+      "cmd-shift-k": "editor::SelectUp",
+      "cmd-shift-l": "editor::SelectRight",
+      "cmd-ctrl-shift-h": ["editor::SelectToBeginningOfLine", { "stop_at_soft_wraps": true, "stop_at_indent": true }],
+      "cmd-ctrl-shift-l": ["editor::SelectToEndOfLine", { "stop_at_soft_wraps": true }],
       "cmd-w": "editor::SelectLargerSyntaxNode",
       "cmd-shift-w": "editor::SelectSmallerSyntaxNode",
       "cmd-d": ["editor::SelectNext", { "replace_newest": false }],
       "cmd-shift-d": ["editor::SelectPrevious", { "replace_newest": false }],
       "cmd-ctrl-g": "editor::SelectAllMatches",
-      "alt-up": "editor::MoveLineUp",
-      "alt-down": "editor::MoveLineDown",
 
       // Editing
       "cmd-shift-enter": "editor::NewlineAbove",
       "cmd-enter": "editor::NewlineBelow",
-      "cmd-shift-j": "editor::JoinLines",
       "cmd-/": ["editor::ToggleComments", { "advance_downwards": false }],
-      "cmd-shift-l": "editor::Format",
       "cmd-shift-u": "editor::RedoSelection",
       "cmd-shift-up": "editor::MoveLineUp",
       "cmd-shift-down": "editor::MoveLineDown",
@@ -87,18 +107,25 @@
       // Multiple cursors
       "cmd-alt-up": "editor::AddSelectionAbove",
       "cmd-alt-down": "editor::AddSelectionBelow",
-      "cmd-alt-l": "editor::SelectAllMatches",
+
+      "cmd-b": null,
+      "cmd-b cmd-w": ["pane::CloseActiveItem", { "close_pinned": false }],
+      "cmd-b cmd-o": ["pane::CloseOtherItems", { "close_pinned": false }],
+      "cmd-b cmd-a": "workspace::CloseAllItemsAndPanes",
+      "cmd-k cmd-w": null,
     },
   },
   {
     "context": "ProjectPanel && not_editing",
     "bindings": {
       "enter": "project_panel::Open",
+      "cmd-p": "workspace::ToggleLeftDock",
       "cmd-n": "project_panel::NewFile",
       "alt-cmd-n": "project_panel::NewDirectory",
       "delete": ["project_panel::Trash", { "skip_prompt": false }],
       "f2": "project_panel::Rename",
-      "cmd-k": "project_panel::CollapseAllEntries",
+      "cmd-b": "project_panel::CollapseAllEntries",
+      "cmd-w": null,
     },
   },
   {
